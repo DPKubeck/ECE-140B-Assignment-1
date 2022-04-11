@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Page Info -->
+    <title>Daniel Kubeck's Assignment 1</title>
+    <meta name="author" content="Daniel Kubeck">
+    <meta name="description" content="Hosted with Style!">
+
+    <link rel="stylesheet" type="text/css" href="css/agile.css">
+  </head>
+
+  <body>
+
+    <div class='hero'>
+      <h1> TheraBot </h1>
+      <p> A helpful desk robot with character! </p>
+    </div>
+
+    <section class='padding-responsive'>
+
+      <div class='separator'>Our Team</div>
+
+      <table class='margin-top-xl'>
+        <thead>
+          <tr>
+            <th class='small'> First Name </th>
+            <th class='medium'> Last Name </th>
+            <th class='large'> Email </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+          <tr>
+            <td> {{user[0]}} </td>
+            <td> {{user[1]}} </td>
+            <td> {{user[2]}} </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <div class='separator'>Our Product</div>
+
+      <h2 class='bordered'> TheraBot </h2>
+
+      <hr>
+
+      <p> Our product is a helping hand, a happy face, and a loveable friend all in one. TheraBot is the first of its kind desk robot that ensures you never feel alone when working at home. TheraBot keeps you motivated by responding to you and cheering you on, and shows that emotion in its face and incredible dance moves. TheraBot also has customizable reactions and personalities, allowing you to truly build your own perfect friend.</p>
+
+      <ul>
+        <li> TheraBot cheers you on and is always there for you. </li>
+        <li> TheraBot has incredible dance moves, and loves showing them off. </li>
+        <li> TheraBot has many personalities, and wants to show you them all. </li>
+      </ul>
+
+    </section>
+
+  </body>
+</html>
