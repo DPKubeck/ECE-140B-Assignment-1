@@ -20,6 +20,15 @@ def get_home(req):
 
   return render_to_response('templates/home.html', {'users': records}, request=req)
 
+def product_page(req):
+
+  return render_to_response('templates/product.html', {}, request=req)
+
+def kvp_page(req):
+
+  return render_to_response('templates/kvp.html', {}, request=req)
+
+
 ''' Route Configurations '''
 if __name__ == '__main__':
   config = Configurator()
@@ -29,6 +38,12 @@ if __name__ == '__main__':
 
   config.add_route('get_home', '/')
   config.add_view(get_home, route_name='get_home')
+
+  config.add_route('product_page', '/product')
+  config.add_view(product_page, route_name='product_page')
+
+  config.add_route('kvp_page', '/kvp')
+  config.add_view(kvp_page, route_name='kvp_page')
 
   config.add_static_view(name='/', path='./public', cache_max_age=3600)
 

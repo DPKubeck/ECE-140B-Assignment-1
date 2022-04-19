@@ -342,3 +342,12 @@ input[type="text"]:focus, textarea:focus {
 .control--radio input:disabled ~ .control__indicator:after {
   background: #7b7b7b;
 }
+
+.linkbutton {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  background: #320797;
+  color: #fff;
+  text-decoration: none;
+}
