@@ -38,7 +38,9 @@ query = "insert into Users (first_name, last_name, email, password, created_at) 
 values = [
   ('Daniel','Kubeck','dkubeck@ucsd.edu', 'abc123', '2022-04-11 12:00:00'),
   ('Sean','Zhao','b3zhao@ucsd.edu', 'abc123', '2022-04-11 12:00:00'),
-  ('Cameron','Nazemi','cnazemi@ucsd.edu', 'abc123', '2022-04-11 12:00:00')
+  ('Cameron','Nazemi','cnazemi@ucsd.edu', 'abc123', '2022-04-11 12:00:00'),
+  ('Candelario', 'Caldera', 'c1calder@ucsd.edu', 'abc123', '2022-04-11 12:00:00'),
+  ('Collin', 'Jun', 'cojun@ucsd.edu', 'abc123', '2022-04-11 12:00:00')
 ]
 cursor.executemany(query, values)
 db.commit()

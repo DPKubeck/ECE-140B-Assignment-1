@@ -28,6 +28,10 @@ def kvp_page(req):
 
   return render_to_response('templates/kvp.html', {}, request=req)
 
+def ui_page(req):
+
+  return render_to_response('templates/ui.html', {}, request=req)
+
 
 ''' Route Configurations '''
 if __name__ == '__main__':
@@ -44,6 +48,9 @@ if __name__ == '__main__':
 
   config.add_route('kvp_page', '/kvp')
   config.add_view(kvp_page, route_name='kvp_page')
+
+  config.add_route('ui_page', '/ui')
+  config.add_view(ui_page, route_name='ui_page')
 
   config.add_static_view(name='/', path='./public', cache_max_age=3600)
 
