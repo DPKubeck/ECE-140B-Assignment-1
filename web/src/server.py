@@ -32,6 +32,15 @@ def ui_page(req):
 
   return render_to_response('templates/ui.html', {}, request=req)
 
+def features_page(req):
+
+  return render_to_response('templates/features.html', {}, request=req)
+
+def interactions_page(req):
+
+  return render_to_response('templates/interactions.html', {}, request=req)
+
+
 
 ''' Route Configurations '''
 if __name__ == '__main__':
@@ -51,6 +60,12 @@ if __name__ == '__main__':
 
   config.add_route('ui_page', '/ui')
   config.add_view(ui_page, route_name='ui_page')
+
+  config.add_route('features_page', '/features')
+  config.add_view(features_page, route_name='features_page')
+
+  config.add_route('interactions_page', '/interactions')
+  config.add_view(interactions_page, route_name='interactions_page')
 
   config.add_static_view(name='/', path='./public', cache_max_age=3600)
 
