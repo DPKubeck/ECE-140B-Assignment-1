@@ -40,6 +40,10 @@ def interactions_page(req):
 
   return render_to_response('templates/interactions.html', {}, request=req)
 
+def revenue_page(req):
+
+  return render_to_response('templates/revenue.html', {}, request=req)
+
 
 
 ''' Route Configurations '''
@@ -66,6 +70,9 @@ if __name__ == '__main__':
 
   config.add_route('interactions_page', '/interactions')
   config.add_view(interactions_page, route_name='interactions_page')
+
+  config.add_route('revenue_page', '/revenue')
+  config.add_view(revenue_page, route_name='revenue_page')
 
   config.add_static_view(name='/', path='./public', cache_max_age=3600)
 
